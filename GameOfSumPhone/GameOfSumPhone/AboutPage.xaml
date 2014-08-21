@@ -1,0 +1,54 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="GameOfSumPhone.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="root_grid" Background="Transparent">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock x:Name="title_block" TextWrapping="Wrap" Text="About" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="72" Foreground="SeaGreen" FontFamily="Fonts/Bubble.ttf#BubbleBaZ"/>
+            <TextBlock x:Name="content_block" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" FontSize="30" Foreground="Gray" TextAlignment="Center">
+            	<Run Text="Game of Sums is mathematical"/>
+            	<LineBreak/>
+            	<Run Text="puzzle which enhances your"/>
+            	<LineBreak/>
+            	<Run Text="ability of doing calculations. "/>
+            	<LineBreak/>
+            	<Run/>
+            	<LineBreak/>
+            	<Run Text="Given a target sum, you have to"/>
+            	<LineBreak/>
+            	<Run Text="trace a sequence of numbers"/>
+            	<LineBreak/>
+            	<Run Text="whose sum is same"/>
+            	<LineBreak/>
+            	<Run Text="as the target sum."/>
+            	<LineBreak/>
+            	<Run/>
+            	<LineBreak/>
+            	<Run Text="Lesser the length of the"/>
+            	<LineBreak/>
+            	<Run Text="sequence,"/>
+            	<Run Text=" "/>
+            	<Run Text="greater will be the points awarded. "/>
+            	<LineBreak/>
+            	<Run/>
+            	<LineBreak/>
+            	<Run Text="Enjoy Playing!!!"/>
+            	<LineBreak/>
+            	<Run/>
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+
+</phone:PhoneApplicationPage>

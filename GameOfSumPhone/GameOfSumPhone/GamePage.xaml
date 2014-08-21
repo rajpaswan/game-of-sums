@@ -1,0 +1,31 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:GameOfSumPhone"
+    x:Class="GameOfSumPhone.GamePage"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="root_grid" Background="Transparent" ManipulationCompleted="root_grid_ManipulationCompleted">
+        <Grid x:Name="top_grid" Height="100" VerticalAlignment="Top">
+            <local:InfoBlock x:Name="score_infoblock" HorizontalAlignment="Right" VerticalAlignment="Top" TextColor="Lime" Data="0" Info="score" Width="Auto" Margin="0,0,10,0" Foreground="{x:Null}"/>
+            <local:InfoBlock x:Name="mode_infoblock" HorizontalAlignment="Left" VerticalAlignment="Top" Data="0" Info="mode" TextColor="Cyan" Width="Auto" Margin="10,0,0,0" Height="100" Foreground="{x:Null}"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100">
+                <local:InfoBlock x:Name="sum_infoblock" HorizontalAlignment="Center" VerticalAlignment="Center" Data="0" Info="target sum" Width="Auto" TextColor="Red" Foreground="{x:Null}" Height="100"/>
+                <local:InfoBlock x:Name="current_infoblock" HorizontalAlignment="Center" VerticalAlignment="Center" TextColor="Yellow" Data="0" Info="current sum" Width="Auto" Foreground="{x:Null}" Height="100"/>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="stack_grid" Margin="0,100,0,0">
+            <StackPanel x:Name="stack_panel" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="80" MinHeight="80"/>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
